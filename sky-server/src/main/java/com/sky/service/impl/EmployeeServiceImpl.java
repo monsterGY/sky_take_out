@@ -89,7 +89,7 @@ public class EmployeeServiceImpl implements EmployeeService {
 
         //设置当前记录的创建人
         //暂时由于无法直接获取到谁创建的，直接写死
-        //TODO 后期需要改为当前用户的id
+        //后期需要改为当前用户的id
         employee.setCreateUser(BaseContext.getCurrentId());
         employee.setUpdateUser(BaseContext.getCurrentId());
 
