@@ -1,6 +1,9 @@
 package com.sky.config;
 
+import com.github.xiaoymin.knife4j.spring.annotations.EnableKnife4j;
 import com.sky.interceptor.JwtTokenAdminInterceptor;
+import lombok.extern.log4j.Log4j;
+import lombok.extern.log4j.Log4j2;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
@@ -14,12 +17,14 @@ import springfox.documentation.builders.RequestHandlerSelectors;
 import springfox.documentation.service.ApiInfo;
 import springfox.documentation.spi.DocumentationType;
 import springfox.documentation.spring.web.plugins.Docket;
+import springfox.documentation.swagger2.annotations.EnableSwagger2;
 
 /**
  * 配置类，注册web层相关组件
  */
 @Configuration
-@Slf4j
+@Log4j2
+@EnableSwagger2
 public class WebMvcConfiguration extends WebMvcConfigurationSupport {
 
     @Autowired
