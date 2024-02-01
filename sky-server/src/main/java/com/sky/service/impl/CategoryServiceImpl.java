@@ -74,9 +74,9 @@ public class CategoryServiceImpl implements CategoryService {
 
         //利用mybatis中的pageHelper插件实现分页查询，注意使用前maven导入
         PageHelper.startPage(categoryPageQueryDTO.getPage(),categoryPageQueryDTO.getPageSize());
-        Page<Employee> page =categoryMapper.pageQuery(categoryPageQueryDTO);
+        Page<Category> page =categoryMapper.pageQuery(categoryPageQueryDTO);
         long total = page.getTotal();
-        List<Employee> result = page.getResult();
+        List<Category> result = page.getResult();
         return new PageResult(total,result);
     }
 
