@@ -4,6 +4,8 @@ import com.sky.entity.User;
 import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Select;
 
+import java.util.Map;
+
 /**
  * 功能描述
  *
@@ -28,4 +30,6 @@ public interface UserMapper {
     void insert(User user);
 
     User getById(Long id);
+
+    Integer countByMap(Map map);
 }
